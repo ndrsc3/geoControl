@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+   <head>
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href='../static/style.css'/>
+   </head>
+   <body>
+        <h1>{{ title }}</h1>
+        <h2> Status </h2>
+        <h3> Is the Hot Tub Hot? <br> <br>                 
+                        {% if hot == 0 %}
+                                No it is not :/
+                        {% else %}
+                                Waters Warm Come On in
+                        {% endif %} </h3>
+        <br>
+        <h2> Commands </h2>
+        <h3>
+                Hot Tub Control <br> <br>
+                        {% if hot == 0 %}
+                                <a href="/hot/on" class="button">Turn me On!</a>
+                        {% else %}
+                                <a href="/hot/off"class="button">It's Too Hot!</a>
+                        {% endif %}
+        </h3>
+   </body>
+</html>
